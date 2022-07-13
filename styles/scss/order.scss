@@ -1,0 +1,424 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+
+.menu {
+  .homeButton {
+    svg {
+      position: relative;
+      top: 5vh;
+      left: 1vw;
+      transform: scale(2);
+    }
+
+    &:hover {
+      animation-name: bounce;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+    }
+    @keyframes bounce {
+      0% {
+        margin-top: 0px;
+      }
+      50% {
+        margin-top: 10px;
+      }
+      100% {
+        margin-top: 0px;
+      }
+    }
+  }
+}
+
+.orderPage {
+  min-height: 100vh;
+  margin-top: 5vh;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  h3 {
+    font-weight: 600;
+  }
+  hr.headDivider {
+    width: 100%;
+    border: 1px solid grey;
+  }
+
+  .orderList {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    .orderHistoryCard {
+      border: 1px solid grey;
+      border-radius: 15px;
+      margin-bottom: 10px;
+      .orderHistoryCardContent {
+        margin: 2vw 2vh 2vh 2vw;
+        li {
+          padding-left: 0px;
+        }
+        .payButton {
+          height: 2.5vw;
+          width: 10vw;
+          border-radius: 5px;
+          background-color: #0390fc;
+          border: 1px solid #0390fc;
+          svg {
+            color: white;
+          }
+          span {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  .cartList {
+    margin-top: 5vh;
+    .itemsCard {
+      border: 1px solid grey;
+      border-radius: 15px;
+      margin-bottom: 10px;
+      .cartImg {
+        width: 10vw;
+        height: 10vw;
+        object-fit: cover;
+        margin: 10px;
+      }
+      .cartProductName {
+        margin: 10px;
+        font-weight: 600;
+      }
+      .cartItemPrice {
+        margin: 10px;
+        .decButton {
+          height: 2.5vw;
+          width: 2.5vw;
+          border-radius: 5px;
+          border: 1px solid grey;
+        }
+        .addButton {
+          height: 2.5vw;
+          width: 2.5vw;
+          border-radius: 5px;
+          background-color: #00de4a;
+          border: 1px solid #00de4a;
+          svg {
+            color: white;
+          }
+        }
+        .deleteButton {
+          height: 2.5vw;
+          width: 11vw;
+          border-radius: 5px;
+          background-color: #db4040;
+          border: 1px solid #db4040;
+          svg {
+            color: white;
+          }
+          span {
+            color: white;
+          }
+        }
+      }
+    }
+    .checkoutButton {
+      position: relative;
+      float: right;
+      margin-top: 3vh;
+      height: 3vw;
+      width: 12vw;
+      border-radius: 5px;
+      background-color: #0390fc;
+      border: 1px solid #0390fc;
+      svg {
+        color: white;
+      }
+      span {
+        color: white;
+      }
+    }
+  }
+
+  .modalPayment {
+    h3 {
+      font-size: 24px;
+    }
+  }
+}
+
+////////////////////////////upto 768p screen
+//////////////////////////
+//////////////////////
+//////////////////
+//////////////
+//////////
+//////
+///
+
+@media only screen and (max-width: 1366px) {
+  .menu {
+    .homeButton {
+      svg {
+        top: 3vw;
+      }
+    }
+  }
+  .cartList {
+    .itemsCard {
+      .cartItemPrice {
+        .deleteButton {
+          height: 3vw;
+          width: 13vw;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}
+
+////////////////////////////IPAD PRO PORTRAIT
+//////////////////////////
+//////////////////////
+//////////////////
+//////////////
+//////////
+//////
+///
+@media only screen and (max-width: 1024px) {
+  .menu {
+    .homeButton {
+      svg {
+        top: 3vw;
+      }
+    }
+  }
+  .orderPage {
+    margin-top: 1vh;
+    .orderList {
+      margin-top: 2vh;
+      .orderHistoryCard {
+        .orderHistoryCardContent {
+          .payButton {
+            height: 2.5vw;
+            width: 12.5vw;
+            span {
+              font-size: 1.2vw;
+            }
+          }
+        }
+      }
+    }
+    .cartList {
+      margin-top: 1vh;
+      .checkoutButton {
+        margin-top: 1vh;
+      }
+      p {
+        font-size: 15px;
+      }
+      .itemsCard {
+        .cartItemPrice {
+          .decButton {
+            height: 4vw;
+            width: 4vw;
+          }
+          .addButton {
+            height: 4vw;
+            width: 4vw;
+          }
+          .deleteButton {
+            height: 3vw;
+            width: 20vw;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+////////////////////////////IPAD PORTRAIT
+//////////////////////////
+//////////////////////
+//////////////////
+//////////////
+//////////
+//////
+///
+@media only screen and (max-width: 768px) {
+  .menu {
+    .homeButton {
+      svg {
+        top: -40px;
+        left: 10vw;
+      }
+    }
+  }
+
+  .orderPage {
+    min-height: 100vh;
+    margin-top: 5vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    h3 {
+      font-weight: 600;
+    }
+    h2 {
+      font-size: 3vw;
+    }
+    hr.headDivider {
+      width: 100%;
+      border: 1px solid grey;
+    }
+    .orderList {
+      .orderHistoryCard {
+        .orderHistoryCardContent {
+          p {
+            font-size: 2vw;
+          }
+          li {
+            font-size: 1.5vw;
+          }
+          .payButton {
+            height: 4vw;
+            width: 15vw;
+            span {
+              font-size: 1.5vw;
+            }
+          }
+        }
+      }
+    }
+    .cartList {
+      margin-top: 5vh;
+      .itemsCard {
+        .cartImg {
+          width: 40vw;
+          height: 40vw;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .cartProductName {
+          margin-left: 5vw;
+        }
+        .cartItemPrice {
+          .decButton {
+            height: 6vw;
+            width: 6vw;
+          }
+          .addButton {
+            height: 6vw;
+            width: 6vw;
+          }
+          .deleteButton {
+            height: 10vw;
+            width: 30vw;
+            border-radius: 5px;
+          }
+        }
+      }
+      .checkoutButton {
+        margin-top: 2vh;
+        height: 4vw;
+        width: 20vw;
+        svg {
+          color: white;
+        }
+        span {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+////////////////////////////MOBILE
+//////////////////////////
+//////////////////////
+//////////////////
+//////////////
+//////////
+//////
+///
+@media only screen and (max-width: 576px) {
+  .menu {
+    .homeButton {
+      svg {
+        top: -35px;
+        left: 10vw;
+      }
+    }
+  }
+  .orderPage {
+    min-height: 100vh;
+    margin-top: 5vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    h3 {
+      font-weight: 600;
+    }
+    h2 {
+      font-size: 5vw;
+    }
+    hr.headDivider {
+      width: 100%;
+      border: 1px solid grey;
+    }
+    .orderList {
+      .orderHistoryCard {
+        .orderHistoryCardContent {
+          p {
+            font-size: 4vw;
+            margin-bottom: 0;
+          }
+          li {
+            font-size: 3vw;
+          }
+          .payButton {
+            margin-top: 2vh;
+            margin-bottom: 2vh;
+            height: 10vw;
+            width: 60vw;
+            span {
+              font-size: 4vw;
+            }
+          }
+        }
+      }
+    }
+    .cartList {
+      margin-top: 5vh;
+      .itemsCard {
+        .cartImg {
+          max-width: 70vw;
+        }
+        .cartProductName {
+          margin-left: 5vw;
+        }
+        .cartItemPrice {
+          .decButton {
+            height: 10vw;
+            width: 10vw;
+          }
+          .addButton {
+            height: 10vw;
+            width: 10vw;
+          }
+          .deleteButton {
+            height: 10vw;
+            width: 50vw;
+            border-radius: 5px;
+            span {
+              font-size: 4vw;
+            }
+          }
+        }
+      }
+      .checkoutButton {
+        margin-top: 2vh;
+        margin-bottom: 5vh;
+        height: 15vw;
+        width: 80vw;
+      }
+    }
+  }
+}

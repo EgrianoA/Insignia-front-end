@@ -1,0 +1,558 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+
+////////////////////////////MOSTLY NEW CSS START FROM HERE
+//////////////////////////
+//////////////////////
+//////////////////
+//////////////
+//////////
+//////
+///
+
+.ant-layout {
+  background-color: white !important;
+}
+
+.homePage {
+  background-color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: black;
+  p {
+    font-size: 20px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  h3 {
+    font-size: 24px;
+    color: #707070;
+    margin-top: -10px;
+  }
+}
+
+.page {
+  min-height: 85vh;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-bottom: 5vh;
+  .note {
+    text-align: center;
+    background-color: #ffffcc;
+    border: 1px solid #c2c2c2;
+    p {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.header {
+  margin-bottom: 5vh;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  h1 {
+    color: #0390fc;
+    margin-bottom: 0px;
+  }
+  hr.headDivider {
+    width: 100%;
+    border: 2px solid #0390fc;
+  }
+  .menu {
+    position: relative;
+    bottom: 25px;
+    .menuButton {
+      svg {
+        position: relative;
+        top: 2vh;
+        left: 1vw;
+        transform: scale(2);
+      }
+      &:hover {
+        color: #05a9f0;
+      }
+    }
+  }
+  .rightIcons {
+    position: relative;
+    float: right;
+    right: 50px;
+    .shoppingCartButton {
+      margin-right: 4vw;
+      svg {
+        position: relative;
+        top: 2vh;
+        transform: scale(2.5);
+      }
+      &:hover {
+        color: #05a9f0;
+      }
+    }
+    .logoutButton {
+      svg {
+        position: relative;
+        top: 2vh;
+        transform: scale(2);
+      }
+      &:hover {
+        color: #05a9f0;
+      }
+    }
+    .loginButton {
+      svg {
+        position: relative;
+        top: 2vh;
+        transform: scale(2);
+      }
+      &:hover {
+        color: #05a9f0;
+      }
+    }
+  }
+}
+.ant-modal.modal {
+  width: 80vw !important;
+}
+.destinationDetail {
+  min-height: 40vw;
+  h3 {
+    font-size: 2vw;
+  }
+  h4 {
+    font-size: 1.5vw;
+  }
+  p {
+    font-size: 1vw;
+  }
+  img {
+    width: 35vw;
+    height: 35vw;
+    object-fit: cover;
+  }
+  .addToCartButton {
+    background-color: #0390fc;
+    width: 21vw;
+    height: 3vw;
+    border: 0px;
+    border-radius: 25px;
+    margin-top: 2vh;
+    span {
+      font-size: 1.2vw;
+      color: white;
+      margin-right: 2vw;
+    }
+    svg {
+      color: white;
+      transform: scale(2);
+    }
+  }
+  .removeFromCart {
+    background-color: #e04747;
+    width: 21vw;
+    height: 3vw;
+    border: 0px;
+    border-radius: 25px;
+    margin-top: 2vh;
+    span {
+      font-size: 1.2vw;
+      color: white;
+      margin-right: 2vw;
+    }
+    svg {
+      color: white;
+      transform: scale(2);
+    }
+  }
+}
+
+.itemCard {
+  height: 30vw;
+  position: relative;
+  h3 {
+    font-size: 18px;
+  }
+  .selected {
+    position: absolute;
+    visibility: hidden;
+    max-width: 3vw;
+    max-height: 3vw;
+    margin-left: 5px;
+    margin-top: 5px;
+  }
+  &:hover {
+    border: 2px solid #0390fc;
+  }
+  .itemImage {
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    width: 16vw;
+    height: 16vw;
+    object-fit: cover;
+    max-width: 300px;
+    max-height: 300px;
+  }
+  .cardFooter {
+    position: absolute;
+    bottom: 5%;
+    width: 80%;
+    .cart {
+      position: relative;
+      float: right;
+      max-height: 30px;
+      img {
+        &:hover {
+          animation-name: bounce;
+          animation-duration: 1s;
+          animation-iteration-count: infinite;
+        }
+        @keyframes bounce {
+          0% {
+            margin-top: 0px;
+          }
+          50% {
+            margin-top: 10px;
+          }
+          100% {
+            margin-top: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+////////////////////////////upto 768p screen
+//////////////////////////
+//////////////////////
+//////////////////
+//////////////
+//////////
+//////
+///
+
+@media only screen and (max-width: 1366px) {
+  .homePage {
+    p {
+      font-size: 1.3vw;
+    }
+    h1 {
+      font-size: 2.5vw;
+    }
+    h2 {
+      font-size: 1.8vw;
+      font-weight: 600;
+    }
+    h3 {
+      font-size: 1.8vw;
+      color: #707070;
+      margin-top: -10px;
+    }
+  }
+
+  .header {
+    margin-bottom: 50px;
+  }
+
+  .itemCard {
+    height: 32vw;
+    h3 {
+      font-size: 1.5vw;
+    }
+    p {
+      font-size: 1.2vw;
+    }
+  }
+}
+
+////////////////////////////IPAD PRO PORTRAIT
+//////////////////////////
+//////////////////////
+//////////////////
+//////////////
+//////////
+//////
+///
+@media only screen and (max-width: 1024px) {
+  .header {
+    h1 {
+      font-size: 35px;
+    }
+    .menu {
+      top: 0vh;
+    }
+    .rightIcons {
+      top: 0vh;
+    }
+  }
+
+  .page {
+    min-height: 0;
+    margin-bottom: 10vh;
+    .userName {
+      font-size: 20px;
+    }
+  }
+
+  .itemCard {
+    height: 40vw;
+    position: relative;
+    .itemImage {
+      width: 20vw;
+      height: 20vw;
+    }
+    h3 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 20px;
+    }
+    .cardFooter {
+      .cart {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  .destinationDetail {
+    min-height: 80vw;
+    h3 {
+      font-size: 3vw;
+    }
+    h4 {
+      font-size: 2vw;
+    }
+    p {
+      font-size: 2vw;
+    }
+    img {
+      margin-bottom: 5vw;
+      width: 40vw;
+      height: 40vw;
+    }
+    .addToCartButton, .removeFromCart {
+      width: 35vw;
+      height: 6vw;
+      margin-top: 2vh;
+      span {
+        font-size: 2.5vw;
+        margin-right: 2vw;
+      }
+      svg {
+        transform: scale(2);
+      }
+    }
+  }
+}
+
+////////////////////////////IPAD PORTRAIT
+//////////////////////////
+//////////////////////
+//////////////////
+//////////////
+//////////
+//////
+///
+@media only screen and (max-width: 768px) {
+  .homePage {
+    margin-top: 2vh;
+    p {
+      font-size: 3vw;
+    }
+    h1 {
+      font-size: 4vw;
+    }
+    h3 {
+      font-size: 3vw;
+    }
+  }
+
+  .header {
+    margin: 0vh 5vw 5vh 5vw;
+    .menu {
+      top: 5vh;
+      .menuButton {
+        svg {
+          top: 0vh;
+        }
+      }
+    }
+    .rightIcons {
+      .shoppingCartButton {
+        margin-right: 4vw;
+        svg {
+          top: 0vh;
+        }
+      }
+      .logoutButton {
+        svg {
+          top: 0vh;
+        }
+      }
+      .loginButton {
+        svg {
+          top: 0vh;
+        }
+      }
+    }
+  }
+
+  .page {
+    padding: 0;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    min-height: 30vh;
+    .userName {
+      font-size: 25px;
+    }
+  }
+
+  .itemCard {
+    height: 50vw;
+    .selected {
+      max-width: 5vw;
+      max-height: 5vw;
+    }
+    .itemImage {
+      width: 28vw;
+      height: 28vw;
+    }
+    .cardFooter {
+      .cart {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  .destinationDetail {
+    min-height: 80vh;
+    h3 {
+      font-size: 3.5vw;
+    }
+    h4 {
+      font-size: 3.5vw;
+    }
+    p {
+      margin-top: 5vh;
+      font-size: 3vw;
+    }
+    img {
+      width: 70vw;
+      height: 50vw;
+      margin-bottom: 20px;
+    }
+    .addToCartButton, .removeFromCart {
+      width: 50vw;
+      height: 10vw;
+      margin-top: 2vh;
+      span {
+        font-size: 3vw;
+        margin-right: 2vw;
+      }
+      svg {
+        transform: scale(2.5);
+      }
+    }
+  }
+}
+
+////////////////////////////MOBILE
+//////////////////////////
+//////////////////////
+//////////////////
+//////////////
+//////////
+//////
+///
+@media only screen and (max-width: 576px) {
+  .homePage {
+    p {
+      font-size: 4vw;
+    }
+    h1 {
+      font-size: 8vw;
+    }
+    h2 {
+      font-size: 6vw;
+    }
+    h3 {
+      font-size: 3vw;
+    }
+  }
+
+  .header {
+    .rightIcons {
+      top: 50px;
+      .shoppingCartButton {
+        margin-right: 10vw;
+      }
+    }
+  }
+
+  .page {
+    min-height: 50vh;
+    .userName {
+      font-size: 15px;
+    }
+  }
+
+  .itemCard {
+    height: 80vw;
+    .ant-card-body {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .itemImage {
+      width: 35vw;
+      height: 35vw;
+    }
+    .cardFooter {
+      .cart {
+        transform: scale(1.5);
+      }
+    }
+  }
+
+  .ant-modal-content {
+    position: relative;
+    // bottom: 15vh;
+  }
+
+  .destinationDetail {
+    min-height: 100vh;
+    h3 {
+      font-size: 5vw;
+    }
+    h4 {
+      font-size: 5vw;
+    }
+    p {
+      margin-top: 5vh;
+      font-size: 4vw;
+    }
+    img {
+      max-width: 70vw;
+      height: 50vw;
+      margin-top: 20px;
+      margin-bottom: 5vh;
+    }
+    .addToCartButton, .removeFromCart {
+      width: 50vw;
+      height: 10vw;
+      margin-top: 2vh;
+      span {
+        font-size: 4vw;
+        margin-right: 5vw;
+      }
+      svg {
+        transform: scale(2);
+      }
+    }
+  }
+}
